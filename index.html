@@ -252,6 +252,10 @@
             -o-transition: opacity 0.33s ease;
             transition: opacity 0.33s ease;
             pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         #notifyForm.visible {
@@ -268,8 +272,8 @@
             -webkit-box-direction: normal;
             -ms-flex-direction: column;
             flex-direction: column;
-            max-width: 400px;
-            margin: auto;
+            width: 400px;
+            max-width: calc(100% - 4em);
         }
 
         #notifyForm .form-wrapper .form-title {
@@ -336,6 +340,10 @@
 
             #main .section.dark {
                 padding: 1.25em 2em;
+            }
+
+            #notifyForm {
+                justify-content: flex-start;
             }
         }
 
