@@ -49,6 +49,10 @@
             color: white;
         }
 
+        body.modal-open {
+            position: fixed;
+        }
+
         h1,
         h2,
         h3,
@@ -514,22 +518,31 @@
     </div>
 
     <script>
+        function setModalVisibility(visible) {
+            var modal = document.getElementById("notifyForm");
+            
+            if (visible) {
+                modal.classList.add("visible");
+                document.body.classList.add("modal-open");
+            } else {
+                modal.classList.remove("visible");
+                document.body.classList.remove("modal-open");
+            }
+        }
+
         var notifyButton = document.getElementById("notify");
         notifyButton.onclick = function () {
-            var modal = document.getElementById("notifyForm");
-            modal.classList.toggle("visible");
+            setModalVisibility(true);
         }
 
         var formClose = document.getElementById("formClose");
         formClose.onclick = function () {
-            var modal = document.getElementById("notifyForm");
-            modal.classList.remove("visible");
+            setModalVisibility(true);
         }
 
         var notifyForm = document.getElementById("mc-embedded-subscribe-form");
         notifyForm.onsubmit = function () {
-            var modal = document.getElementById("notifyForm");
-            modal.classList.remove("visible");
+            setModalVisibility(false);
         }
     </script>
 
