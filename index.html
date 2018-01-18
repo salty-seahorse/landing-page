@@ -41,6 +41,7 @@
 
         html {
             font-size: 18pt;
+            background: rgb(80, 170, 184);
         }
 
         body {
@@ -48,6 +49,13 @@
             min-height: 100vh;
             -webkit-text-size-adjust: none;
             color: white;
+            opacity: 0;
+            will-change: opacity;
+            transition:opacity .33s ease-in;
+        }
+
+        body.is-ready {
+            opacity: 1;
         }
 
         body.modal-open {
@@ -129,13 +137,6 @@
             align-content: center;
             min-height: 100vh;
             min-width: 320px;
-            opacity: 0;
-            will-change: opacity;
-            transition:opacity .33s ease-in;
-        }
-
-        #main.is-ready {
-            opacity: 1;
         }
 
         #main>* {
@@ -571,8 +572,7 @@
 
         var logo = document.getElementById("logo");
         logo.onload = function() {
-            var main = document.getElementById("main");
-            main.classList.add("is-ready");
+            document.body.classList.add("is-ready");
         };
         logo.src = "assets/images/logo.png";
     </script>
