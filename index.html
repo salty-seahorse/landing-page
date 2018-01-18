@@ -129,6 +129,13 @@
             align-content: center;
             min-height: 100vh;
             min-width: 320px;
+            opacity: 0;
+            will-change: opacity;
+            transition:opacity .33s ease-in;
+        }
+
+        #main.is-ready {
+            opacity: 1;
         }
 
         #main>* {
@@ -561,6 +568,11 @@
         notifyForm.onsubmit = function () {
             setModalVisibility(false);
         }
+
+        setTimeout(function () {
+            var main = document.getElementById("main");
+            main.classList.add("is-ready");
+        }, 50);
     </script>
 
 </body>
