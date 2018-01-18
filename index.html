@@ -20,8 +20,8 @@
     <meta property="twitter:image" content="assets/images/salty-seahorse-shop.jpg">
 
     <link rel="preconnect" href="https://fonts.gstatic.com/">
-    <link rel="preload" as="img" href="assets/images/bg.jpg">
-    <link rel="preload" as="img" href="assets/images/logo.png">
+    <link rel="preload" as="image" href="assets/images/bg.jpg">
+    <link rel="preload" as="image" href="assets/images/logo.png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300" rel="stylesheet">
 
     <style type="text/css">
@@ -434,7 +434,7 @@
 
     <div id="main">
         <div id="hero" class="section">
-            <img id="logo" src="assets/images/logo.png" alt="Salty Seahorse Shop" />
+            <img id="logo" alt="Salty Seahorse Shop" />
             <h1 id="title" class="hidden">Salty Seahorse Shop</h1>
             <h2 class="center-text">Hand-crafted, locally-inspired soy candles made exclusively from repurposed glass in Orange Beach, AL</h2>
         </div>
@@ -574,6 +574,7 @@
             var main = document.getElementById("main");
             main.classList.add("is-ready");
         };
+        logo.src = "assets/images/logo.png";
     </script>
 
 </body>
