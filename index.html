@@ -22,7 +22,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link rel="preload" as="image" href="assets/images/bg.jpg">
     <link rel="preload" as="image" href="assets/images/logo.png">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300" rel="stylesheet">
 
     <style type="text/css">
         html,
@@ -420,19 +419,6 @@
             transform: translateX(-50%);
         }
     </style>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112594073-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-112594073-1');
-    </script>
 </head>
 
 <body>
@@ -554,6 +540,8 @@
         </div>
     </div>
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300" rel="stylesheet">
+
     <script>
         function setModalVisibility(visible) {
             var modal = document.getElementById("notifyForm");
@@ -587,6 +575,19 @@
             document.body.classList.add("is-ready");
         };
         logo.src = "assets/images/logo.png";
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112594073-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-112594073-1');
     </script>
 
 </body>
