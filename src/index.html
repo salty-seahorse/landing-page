@@ -22,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/">
     <link rel="preload" as="image" href="assets/images/bg.jpg">
     <link rel="preload" as="image" href="assets/images/logo.png">
+    <link rel="preload" as="script" href="assets/js/webfont.js">
 
     <style type="text/css">
         html,
@@ -48,12 +49,9 @@
             min-height: 100vh;
             -webkit-text-size-adjust: none;
             color: white;
-            opacity: 0;
-            will-change: opacity;
-            transition: opacity .33s ease-in;
         }
 
-        body.is-ready {
+        body.is-ready:before  {
             opacity: 1;
         }
 
@@ -81,6 +79,9 @@
         }
 
         body:before {
+            opacity: 0;
+            will-change: opacity;
+            transition: opacity .33s ease-in;
             content: '';
             display: block;
             position: fixed;
@@ -137,6 +138,13 @@
             align-content: center;
             min-height: 100vh;
             min-width: 320px;
+            opacity: 0;
+            will-change: opacity;
+            transition: opacity .33s ease-in;
+        }
+
+        html.wf-active #main {
+            opacity: 1;
         }
 
         #main>* {
@@ -540,8 +548,6 @@
         </div>
     </div>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300" rel="stylesheet">
-
     <script>
         function setModalVisibility(visible) {
             var modal = document.getElementById("notifyForm");
@@ -575,6 +581,15 @@
             document.body.classList.add("is-ready");
         };
         logo.src = "assets/images/logo.png";
+    </script>
+
+    <script src="assets/js/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Open Sans Condensed:300']
+            }
+        });
     </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
